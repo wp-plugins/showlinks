@@ -12,8 +12,16 @@ Version: 1.0
 Author URI: http://kafit.se/
 */
 
-function showlinksfunc() {
-    wp_list_bookmarks('title_li=&categorize=0');
+function showlinksfunc($slparams) {
+//    printf('<pre>');print_r($slparams);printf('</pre>');
+    $parameters = 'title_li=&categorize=0';
+    if (isset($slparams['category_name'])) { 
+	$parameters = $parameters.'&category_name='.$slparams['category_name'];
+        printf('<pre>');print_r('AAAAAAAAAAAAAAAAAAAAAAAA');printf('</pre>');
+    } else {
+//	$parameters = $parameters.'&categorize=0';
+    }
+    wp_list_bookmarks($parameters);
 }
 
 add_shortcode('showlinks', 'showlinksfunc');
