@@ -17,20 +17,20 @@ A small plugin whose only purpose is to show links added with the Dashboard, usi
 Place showlinks.php the plugin directory, activate it in the Dashboard, add the short code [showlinks] to any page or post.
 
 Available parameters:
-category=<comma-separated ID-list> // Cannot be used along with category name
-category_name="<category title>" // Cannot be used along with category
-show_images=1 or 0 (1=true (default), 0=false)
-show_name=1 or 0 (1=true, 0=false (default)) // Only active when picture is set for link
-show_description=1 or 0 (1=true, 0=false (default)
+* category=<comma-separated ID-list> // Cannot be used along with category name
+* category_name="<category title>" // Cannot be used along with category
+* show_images=1 or 0 (1=true (default), 0=false)
+* show_name=1 or 0 (1=true, 0=false (default)) // Only active when picture is set for link
+* show_description=1 or 0 (1=true, 0=false (default)
 
 Examples:
-To show category ID's 2 and 5 along with the description
-[showlinks category=2,5 show_description=1]
+* To show category ID's 2 and 5 along with the description
+* [showlinks category=2,5 show_description=1]
 
-To show link category "Räksmörgås" (Yes, this is some what stupid when using characters like this... use ID's instead if possible.)
-[showlink category_name="Räksmörgås"]
+* To show link category "Räksmörgås" (Yes, this is some what stupid when using characters like this... use ID's instead if possible.)
+* [showlink category_name="Räksmörgås"]
 
-Done!
+* Done!
 
 == Changelog ==
 
