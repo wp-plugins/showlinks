@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Show_Links
- * @version 1.01
+ * @version 1.02
  */
 /*
 Plugin Name: Show Links
 Plugin URI: http://oxo.nu/tag/showlinks
 Description: Show links added with the dashboard using a shortcode [showlinks] in posts.
 Author: Niklas Rydén
-Version: 1.01
+Version: 1.02
 Author URI: http://kafit.se/
 */
 
@@ -17,7 +17,7 @@ function showlinksfunc($slparams) {
 //    printf('<pre>');print_r($slparams);printf('</pre>');
 
     // The base parameters we want to use...
-    $parameters = 'title_li=&categorize=0';
+    $parameters = 'title_li=&categorize=0&echo=0';
 
     // Comma-separated ID-list
     if (isset($slparams['category'])) { $parameters = $parameters.'&category='.$slparams['category']; }
@@ -34,7 +34,7 @@ function showlinksfunc($slparams) {
     // 1 = true, 0 = false (default)
     if (isset($slparams['show_description'])) { $parameters = $parameters.'&show_description='.$slparams['show_description']; }
 
-    wp_list_bookmarks($parameters);
+    return wp_list_bookmarks($parameters);
 }
 
 add_shortcode('showlinks', 'showlinksfunc');

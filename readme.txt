@@ -5,8 +5,8 @@ Plugin URI: http://oxo.nu/tag/showlinks
 Donate link:
 Tags: admin, plugin, links, shortcode
 Requires at least: 2.1
-Tested up to: 3.3.1
-Stable tag: 1.01
+Tested up to: 3.4.2
+Stable tag: 1.02
 
 A small plugin whose only purpose is to show links added with the Dashboard, using a shortcode.
 
@@ -40,7 +40,10 @@ Examples:
 = 1.01 =
 * Added the options category, category_name, show_images, show_name and show_description.
 
+= 1.02 =
+* Rewrote some code regarding string output. This is a feature/bug-fix release.
+
 == Upgrade Notice ==
 
-= 1.01 =
-Added a few of the parameters available with wp_list_bookmarks, if you want to limit or enhance the output in some way you want this upgrade.
+= 1.02 =
+This upgrade will probably change the location of the link-list. But it's all for the better.
